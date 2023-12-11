@@ -56,8 +56,9 @@ try {
 
         *This is an automated message*
 "@
-		$subjectEmail ="[$codeStatus] Number of Registry on $psmIdentity has exceeded"
-        Send-Email -subject $subjectEmail -body $bodyEmail
+	$subjectEmail ="[$codeStatus] Number of Registry on $psmIdentity has exceeded"
+ 	# Uncomment this line to allow send email notification
+        #Send-Email -subject $subjectEmail -body $bodyEmail
     }
 }
 catch {
