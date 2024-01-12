@@ -51,10 +51,10 @@ chmod 755 $BASEPATH/logCleaner.sh
 ################################## Create CronJob
 echo ""
 echo "***** Creating Cronjob task to get concurrent session hourly *****"
-(crontab -l ; echo '* * * * * '"$BASEPATH"'/PSMPConcurrentSession.sh') | crontab -
+(crontab -l ; echo '0 * * * * '"$BASEPATH"'/PSMPConcurrentSession.sh') | crontab -
 
 echo "***** Creating Cronjob task to run Log rotation mechanism daily at 04:00 *****"
-(crontab -l ; echo '* * * * * '"$BASEPATH"'/logCleaner.sh') | crontab -
+(crontab -l ; echo '0 4 * * * '"$BASEPATH"'/logCleaner.sh') | crontab -
 
 echo "PSMP Script Logs" >> $PSMPLOGS
 echo "1. Create PSMPConcurrentSession.sh" >> $PSMPLOGS
